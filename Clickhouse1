@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS user_events_raw
 (
     user_id      UInt32,          -- Идентификатор пользователя
-    event_type   String,          -- Тип события (login, purchase и т.д.)
+    event_type   String,          
     spent_points UInt32,           -- Количество потраченных баллов
     event_date   DateTime         -- Дата и время события
 )
