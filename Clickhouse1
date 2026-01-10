@@ -1,0 +1,115 @@
+-- Создание таблицы для сырых логов событий
+CREATE TABLE IF NOT EXISTS user_events_raw
+(
+    user_id      UInt32,          -- Идентификатор пользователя
+    event_type   String,          -- Тип события (login, purchase и т.д.)
+    spent_points UInt32,           -- Количество потраченных баллов
+    event_date   DateTime         -- Дата и время события
+)
+ENGINE = MergeTree()
+PARTITION BY toYYYYMM(event_date) -- Разделяем данные по месяцам для оптимизации
+ORDER BY (event_date, user_id)    -- Сортируем по дате и пользователю для быстрого поиска
+TTL event_date + INTERVAL 30 DAY; -- Автоматически удаляем данные старше 30 дней
+
+-- Создание агрегированной таблицы
+CREATE TABLE IF NOT EXISTS user_events_aggregated
+(
+    event_date   Date,                 -- Дата события (без времени)
+    event_type   String,               -- Тип события
+    users_agg    AggregateFunction(uniq, UInt64), -- Состояние для уникальных пользователей
+    points_agg   AggregateFunction(sum, Int32),   -- Состояние для суммы баллов
+    actions_agg  AggregateFunction(count)         -- Состояние для количества действий
+)
+ENGINE = AggregatingMergeTree()
+PARTITION BY toYYYYMM(event_date) -- Разделяем по месяцам
+ORDER BY (event_date, event_type) -- Сортируем по дате и типу события
+TTL event_date + INTERVAL 180 DAY; -- Храним агрегаты 180 дней
+
+-- Создание Materialized View
+CREATE MATERIALIZED VIEW IF NOT EXISTS mv_user_events_aggregation
+TO user_events_aggregated -- Направляем результат напрямую в таблицу агрегатов
+AS
+SELECT
+    toDate(event_date) AS event_date, -- Приводим дату-время к дате
+    event_type,
+    uniqState(user_id) AS users_agg,   -- Состояние для уникальных пользователей
+    sumState(spent_points) AS points_agg, -- Состояние для суммы баллов
+    countState() AS actions_agg        -- Состояние для подсчёта всех строк
+FROM user_events_raw
+GROUP BY event_date, event_type;
+
+-- Вставка тестовых данных (из задания)
+INSERT INTO user_events VALUES
+-- События 10 дней назад
+(1, 'login', 0, now() - INTERVAL 10 DAY),
+(2, 'signup', 0, now() - INTERVAL 10 DAY),
+(3, 'login', 0, now() - INTERVAL 10 DAY),
+
+-- События 7 дней назад
+(1, 'login', 0, now() - INTERVAL 7 DAY),
+(2, 'login', 0, now() - INTERVAL 7 DAY),
+(3, 'purchase', 30, now() - INTERVAL 7 DAY),
+
+-- События 5 дней назад
+(1, 'purchase', 50, now() - INTERVAL 5 DAY),
+(2, 'logout', 0, now() - INTERVAL 5 DAY),
+(4, 'login', 0, now() - INTERVAL 5 DAY),
+
+-- События 3 дня назад
+(1, 'login', 0, now() - INTERVAL 3 DAY),
+(3, 'purchase', 70, now() - INTERVAL 3 DAY),
+(5, 'signup', 0, now() - INTERVAL 3 DAY),
+
+-- События вчера
+(2, 'purchase', 20, now() - INTERVAL 1 DAY),
+(4, 'logout', 0, now() - INTERVAL 1 DAY),
+(5, 'login', 0, now() - INTERVAL 1 DAY),
+
+-- События сегодня
+(1, 'purchase', 25, now()),
+(2, 'login', 0, now()),
+(3, 'logout', 0, now()),
+(6, 'signup', 0, now()),
+(6, 'purchase', 100, now());
+
+-- 5. Запрос для расчёта Retention за 7 дней
+WITH
+    first_actions AS (
+        SELECT
+            user_id,
+            min(toDate(event_date)) AS first_date
+        FROM user_events_raw
+        GROUP BY user_id
+    ),
+    returned_users AS (
+        SELECT DISTINCT
+            fa.user_id,
+            fa.first_date
+        FROM user_events_raw ue
+        INNER JOIN first_actions fa ON ue.user_id = fa.user_id
+        WHERE toDate(ue.event_date) BETWEEN fa.first_date + INTERVAL 1 DAY
+                                        AND fa.first_date + INTERVAL 7 DAY
+    )
+SELECT
+    COUNT(DISTINCT fa.user_id) AS total_users_day_0,
+    COUNT(DISTINCT ru.user_id) AS returned_in_7_days,
+    ROUND(returned_in_7_days * 100.0 / total_users_day_0, 2) AS retention_7d_percent,
+    CONCAT(
+        toString(total_users_day_0), '|',
+        toString(returned_in_7_days), '|',
+        toString(retention_7d_percent), '|'
+    ) AS result_format
+FROM first_actions fa
+LEFT JOIN returned_users ru ON fa.user_id = ru.user_id;
+
+--  Запрос для быстрой аналитики по дням
+SELECT
+    event_date,
+    event_type,
+    uniqMerge(users_agg) AS unique_users,  -- Финализация уникальных пользователей
+    sumMerge(points_agg) AS total_points,  -- Финализация суммы баллов
+    countMerge(actions_agg) AS total_actions -- Финализация количества действий
+FROM user_events_aggregated
+WHERE event_date >= now() - INTERVAL 180 DAY -- Берем данные за весь период хранения
+GROUP BY event_date, event_type
+ORDER BY event_date DESC, event_type;
