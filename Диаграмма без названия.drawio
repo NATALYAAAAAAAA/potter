@@ -23,7 +23,7 @@
             <mxPoint x="680" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FfHpndZCx_D-bhmJoPRN-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; style=&quot;color: light-dark(rgb(18, 18, 18), rgb(62, 62, 62));&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;Есть ли номер счета в Specified_Rates&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="FfHpndZCx_D-bhmJoPRN-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; style=&quot;color: light-dark(rgb(18, 18, 18), rgb(62, 62, 62));&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;Номер счета в Specified_Rates?&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="320" x="270" y="500" as="geometry" />
         </mxCell>
         <mxCell id="FfHpndZCx_D-bhmJoPRN-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Да" vertex="1">
