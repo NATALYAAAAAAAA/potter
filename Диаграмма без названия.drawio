@@ -40,7 +40,7 @@
         <mxCell id="J5sqv2oT2YjrMHX_VZ_B-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Берём trrate из&amp;nbsp;&lt;div&gt;&lt;span style=&quot;color: rgb(18, 18, 18); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; white-space: pre;&quot;&gt;Specified_Rates&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(18, 18, 18); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; white-space: pre;&quot;&gt;Выгрузка ставок &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(18, 18, 18); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; white-space: pre;&quot;&gt;из Axioma Deposit&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="150" x="70" y="600" as="geometry" />
         </mxCell>
-        <mxCell id="J5sqv2oT2YjrMHX_VZ_B-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Trrate из&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;acc_list_plus&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="J5sqv2oT2YjrMHX_VZ_B-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Trrate &lt;font face=&quot;Consolas, Courier New, monospace&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;рассчитанная &lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;на предыдущих шагах&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="620" y="600" as="geometry" />
         </mxCell>
         <mxCell id="J5sqv2oT2YjrMHX_VZ_B-3" edge="1" parent="1" source="FfHpndZCx_D-bhmJoPRN-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.059;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" target="FfHpndZCx_D-bhmJoPRN-4">
@@ -57,6 +57,27 @@
         </mxCell>
         <mxCell id="J5sqv2oT2YjrMHX_VZ_B-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Да" vertex="1">
           <mxGeometry height="30" width="60" x="390" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="MJyzcrcrMowfo66llQur-3" edge="1" parent="1" source="MJyzcrcrMowfo66llQur-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MJyzcrcrMowfo66llQur-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Сделка заключена после 01.01.2018" vertex="1">
+          <mxGeometry height="60" width="120" x="500" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="MJyzcrcrMowfo66llQur-4" edge="1" parent="1" source="MJyzcrcrMowfo66llQur-1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitX=0.192;exitY=1.017;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="100" as="geometry">
+            <Array as="points" />
+            <mxPoint x="470" y="230" as="sourcePoint" />
+            <mxPoint x="520" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MJyzcrcrMowfo66llQur-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Да" vertex="1">
+          <mxGeometry height="30" width="60" x="660" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="MJyzcrcrMowfo66llQur-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Нет" vertex="1">
+          <mxGeometry height="30" width="60" x="470" y="220" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
