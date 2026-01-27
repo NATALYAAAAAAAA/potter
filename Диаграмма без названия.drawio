@@ -21,31 +21,14 @@
         <mxCell id="FfHpndZCx_D-bhmJoPRN-3" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="TrRate IS NULL" vertex="1">
           <mxGeometry height="120" width="120" x="80" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="zHVgcEqivxzsfJ6S9BW6-16" edge="1" parent="1" source="FfHpndZCx_D-bhmJoPRN-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="320" y="690" />
-            </Array>
-            <mxPoint x="320" y="720" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="zHVgcEqivxzsfJ6S9BW6-18" edge="1" parent="1" source="FfHpndZCx_D-bhmJoPRN-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="J5sqv2oT2YjrMHX_VZ_B-1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="920" y="680" />
-              <mxPoint x="920" y="680" />
-            </Array>
-            <mxPoint x="660" y="720" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="FfHpndZCx_D-bhmJoPRN-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; style=&quot;color: light-dark(rgb(18, 18, 18), rgb(62, 62, 62));&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;Проверка наличия номера счета в Specified_Rates&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="70" width="1260" x="30" y="690" as="geometry" />
+          <mxGeometry height="70" width="1260" x="30" y="710" as="geometry" />
         </mxCell>
         <mxCell id="J5sqv2oT2YjrMHX_VZ_B-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="TrRate из&amp;nbsp;&lt;div&gt;&lt;span style=&quot;color: rgb(18, 18, 18); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; white-space: pre;&quot;&gt;Specified_Rates&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(18, 18, 18); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; white-space: pre;&quot;&gt;Выгрузка ставок &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(18, 18, 18); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; white-space: pre;&quot;&gt;из Axioma Deposit&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="160" x="860" y="840" as="geometry" />
         </mxCell>
         <mxCell id="J5sqv2oT2YjrMHX_VZ_B-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;TrRate &lt;font face=&quot;Consolas, Courier New, monospace&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;рассчитанная &lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;на предыдущих шагах&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="80" width="160" x="240" y="840" as="geometry" />
+          <mxGeometry height="80" width="160" x="240" y="850" as="geometry" />
         </mxCell>
         <mxCell id="J5sqv2oT2YjrMHX_VZ_B-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Нет" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="120" as="geometry" />
@@ -115,11 +98,14 @@
         <mxCell id="zHVgcEqivxzsfJ6S9BW6-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;dfr11.St_rate_corr + (talp11_1.Period_ - dfr11.St_Period) / (dfr11.End_Period - dfr11.St_Period) * (dfr11.End_rate_corr - dfr11.St_rate_corr)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;from&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; db_access.db_11_acc_list_plus talp11_1&lt;/div&gt;&lt;div&gt;LEFT join&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; db_access.db_11_deposits_ftp_rates dfr11&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="1050" y="160" as="geometry" />
         </mxCell>
+        <mxCell id="zHVgcEqivxzsfJ6S9BW6-39" edge="1" parent="1" source="zHVgcEqivxzsfJ6S9BW6-17" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="J5sqv2oT2YjrMHX_VZ_B-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="zHVgcEqivxzsfJ6S9BW6-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Нет" vertex="1">
-          <mxGeometry height="30" width="60" x="170" y="770" as="geometry" />
+          <mxGeometry height="30" width="60" x="260" y="800" as="geometry" />
         </mxCell>
         <mxCell id="zHVgcEqivxzsfJ6S9BW6-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Да" vertex="1">
-          <mxGeometry height="30" width="60" x="780" y="770" as="geometry" />
+          <mxGeometry height="30" width="60" x="840" y="790" as="geometry" />
         </mxCell>
         <mxCell id="zHVgcEqivxzsfJ6S9BW6-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Нет" vertex="1">
           <mxGeometry height="30" width="60" x="130" y="360" as="geometry" />
