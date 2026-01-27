@@ -141,6 +141,9 @@
         <mxCell id="zHVgcEqivxzsfJ6S9BW6-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Нет" vertex="1">
           <mxGeometry height="30" width="60" x="260" y="660" as="geometry" />
         </mxCell>
+        <mxCell id="zHVgcEqivxzsfJ6S9BW6-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Да" vertex="1">
+          <mxGeometry height="30" width="60" x="840" y="660" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
