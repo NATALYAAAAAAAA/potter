@@ -305,41 +305,11 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="fyz507aIEs2RQHM6UDbi" name="Страница-4">
-    <mxGraphModel dx="1418" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="J8QZpxQBcIo0J_6vZI64" name="CA">
+    <mxGraphModel dx="1034" dy="578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="edk5I29I21XmXz5PHnFQ-8" parent="1" style="whiteSpace=wrap;html=1;fontSize=14;align=left;spacingTop=0;spacing=14;" value="&lt;div&gt;Трансфертная ставка трансфертной кривой.&lt;/div&gt;&lt;div&gt;В случае отсутствия срочности в шкале&amp;nbsp; &amp;nbsp; трансфертных ставок, трансфертная ставка&amp;nbsp; &amp;nbsp; определяется методом линейной интерполяции&lt;/div&gt;" vertex="1">
-          <mxGeometry height="110" width="370" x="470" y="320" as="geometry" />
-        </mxCell>
-        <mxCell id="edk5I29I21XmXz5PHnFQ-9" edge="1" parent="1" source="edk5I29I21XmXz5PHnFQ-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="edk5I29I21XmXz5PHnFQ-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="edk5I29I21XmXz5PHnFQ-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Казначейство&lt;/font&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="60" width="370" x="470" y="220" as="geometry" />
-        </mxCell>
-        <mxCell id="edk5I29I21XmXz5PHnFQ-11" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="235" y="280" as="sourcePoint" />
-            <mxPoint x="235" y="320" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="edk5I29I21XmXz5PHnFQ-12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="234.5" y="127" as="sourcePoint" />
-            <mxPoint x="234.5" y="220" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="edk5I29I21XmXz5PHnFQ-13" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="654.5" y="127" as="sourcePoint" />
-            <mxPoint x="654.5" y="220" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="edk5I29I21XmXz5PHnFQ-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b style=&quot;font-size: 21px;&quot;&gt;Источник трансфертной ставки в базе&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b style=&quot;font-size: 21px;&quot;&gt;О. Краснова Deposits&lt;/b&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="60" width="520" x="190" y="70" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
