@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.3.8" pages="4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.4.0" pages="4">
   <diagram name="Депозит" id="YxC1H8umyHsWeMCKvjyq">
     <mxGraphModel dx="1657" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -187,27 +187,27 @@
     </mxGraphModel>
   </diagram>
   <diagram id="0wo6O-9KUC9_GibLaEcr" name="НСО">
-    <mxGraphModel dx="3626" dy="1534" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3626" dy="1514" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="izf9-5xTIUbEHbEWQ2Ai-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;b style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 18px; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;Клиентская ставка + 0,0005&lt;/b&gt;&lt;span style=&quot;text-align: start; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot; face=&quot;Times New Roman&quot;&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;text-align: start; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot; face=&quot;Times New Roman&quot;&gt;&lt;div&gt;&lt;span style=&quot;text-align: start; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot; face=&quot;Times New Roman&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;Для &quot;Метрополитена&quot;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="183" width="261" x="-1221" y="-68" as="geometry" />
+          <mxGeometry height="183" width="261" x="-1301" y="-69" as="geometry" />
         </mxCell>
         <mxCell id="izf9-5xTIUbEHbEWQ2Ai-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;spacing=1;verticalAlign=middle;align=center;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;Клиентская ставка&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Если трансфертная ставка, рассчитанная на данных с портала Казначейства меньше клиентской ставки из&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;ПО&lt;b&gt; &lt;/b&gt;&quot;Аксиома.Депозиты&quot;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="183" width="269" x="-903" y="-68" as="geometry" />
+          <mxGeometry height="183" width="269" x="-1010" y="-70" as="geometry" />
         </mxCell>
         <mxCell id="I8zs7ZQ__GAEesSEYyCI-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;&quot;Трансфертная ставка&quot; - &quot;Спред для неснижаемых остатков (НСО) на расчетных счетах клиентов&quot;&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;В случае отсутствия срочности в шкале&amp;nbsp; &amp;nbsp; трансфертных ставок, трансфертная ставка&amp;nbsp; &amp;nbsp; определяется методом линейной интерполяции&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="184" width="566" x="-500" y="-67" as="geometry" />
+          <mxGeometry height="184" width="513" x="-410" y="-69" as="geometry" />
         </mxCell>
         <mxCell id="6b8r5sfL37_fqcPmEVYz-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Расчет трансферной ставки для НСО в базе О.Краснова&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="1446" x="-975" y="-376" as="geometry" />
         </mxCell>
         <mxCell id="x6m14pnOt6pkRnWPFEyW-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;ПО &quot;Аксиома.Депозиты&quot;&lt;/font&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="93" width="591" x="-1221" y="-216.5" as="geometry" />
+          <mxGeometry height="93" width="850" x="-1297" y="-216.5" as="geometry" />
         </mxCell>
         <mxCell id="txro-W1mV9u9SdrVovgy-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Казначейство&lt;/font&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="92.5" width="660" x="-557" y="-216.25" as="geometry" />
+          <mxGeometry height="92.5" width="514" x="-411" y="-216.25" as="geometry" />
         </mxCell>
         <mxCell id="-Q7S0fq9UGNna77kS0pt-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Ручные корректировки&lt;/b&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="94.5" width="356" x="185" y="-216.5" as="geometry" />
@@ -233,20 +233,20 @@
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-230.5" y="-316" as="sourcePoint" />
-            <mxPoint x="-231" y="-221.28571428571422" as="targetPoint" />
+            <mxPoint x="-136.5" y="-313" as="sourcePoint" />
+            <mxPoint x="-137" y="-218.28571428571422" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-6" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1090.71" y="-123.75" as="sourcePoint" />
-            <mxPoint x="-1091.21" y="-71.89285714285711" as="targetPoint" />
+            <mxPoint x="-1166.5" y="-123.75" as="sourcePoint" />
+            <mxPoint x="-1167" y="-71.89285714285711" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-227.20999999999998" y="-123.75" as="sourcePoint" />
-            <mxPoint x="-227.70999999999998" y="-71.89285714285711" as="targetPoint" />
+            <mxPoint x="-133.5" y="-120.86" as="sourcePoint" />
+            <mxPoint x="-134" y="-69.00285714285711" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-8" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
@@ -257,8 +257,17 @@
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-768.71" y="-122" as="sourcePoint" />
-            <mxPoint x="-769.21" y="-70.14285714285711" as="targetPoint" />
+            <mxPoint x="-875.71" y="-123.75" as="sourcePoint" />
+            <mxPoint x="-876.21" y="-71.89285714285711" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zphUhXNxyGvT-HbDHq1s-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 18px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;Ставка безубыточности&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 18px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 18px; background-color: rgb(255, 255, 255);&quot;&gt;В случае попадания в файл &quot;КУАПы&quot;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="183" width="261" x="-709" y="-68" as="geometry" />
+        </mxCell>
+        <mxCell id="zphUhXNxyGvT-HbDHq1s-3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-575.5" y="-122" as="sourcePoint" />
+            <mxPoint x="-576" y="-70.14285714285711" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
