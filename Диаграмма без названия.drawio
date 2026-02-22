@@ -213,28 +213,28 @@
           <mxGeometry height="94.5" width="356" x="185" y="-216.5" as="geometry" />
         </mxCell>
         <mxCell id="-Q7S0fq9UGNna77kS0pt-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;0,10 %&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;При нарушении НСО&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="185" width="266" x="246" y="-70" as="geometry" />
+          <mxGeometry height="185" width="354" x="187" y="-71" as="geometry" />
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-914" y="-287" />
-              <mxPoint x="-914" y="-287" />
+              <mxPoint x="-872.71" y="-290" />
+              <mxPoint x="-872.71" y="-290" />
             </Array>
-            <mxPoint x="-913.5" y="-313" as="sourcePoint" />
-            <mxPoint x="-914" y="-218.28571428571422" as="targetPoint" />
+            <mxPoint x="-872.21" y="-316" as="sourcePoint" />
+            <mxPoint x="-872.71" y="-221.28571428571422" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="382.5" y="-311.21" as="sourcePoint" />
-            <mxPoint x="382" y="-216.49571428571423" as="targetPoint" />
+            <mxPoint x="359.5" y="-316" as="sourcePoint" />
+            <mxPoint x="359" y="-221.28571428571422" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-136.5" y="-313" as="sourcePoint" />
-            <mxPoint x="-137" y="-218.28571428571422" as="targetPoint" />
+            <mxPoint x="-149.5" y="-311.21" as="sourcePoint" />
+            <mxPoint x="-150" y="-216.49571428571423" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-6" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
@@ -245,14 +245,14 @@
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-133.5" y="-120.86" as="sourcePoint" />
-            <mxPoint x="-134" y="-69.00285714285711" as="targetPoint" />
+            <mxPoint x="-150.5" y="-120.86" as="sourcePoint" />
+            <mxPoint x="-151" y="-69.00285714285711" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-8" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="382.5" y="-123.75" as="sourcePoint" />
-            <mxPoint x="382" y="-71.89285714285711" as="targetPoint" />
+            <mxPoint x="362.79" y="-123.75" as="sourcePoint" />
+            <mxPoint x="362.29" y="-71.89285714285711" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="0ex6WI2LNBS4Kr5oMUWR-9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
