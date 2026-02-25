@@ -1,0 +1,269 @@
+import json
+import time
+import argparse
+import logging
+from datetime import datetime
+
+import psycopg2
+from clickhouse_driver import Client
+from kafka import KafkaProducer, KafkaConsumer
+from kafka.errors import NoBrokersAvailable
+
+# настройки подключения
+pg_config = {
+    'host': 'localhost',
+    'port': 5432,
+    'database': 'testdb',
+    'user': 'testuser',
+    'password': 'testpass'
+}
+
+kafka_config = {
+    'bootstrap_servers': 'localhost:9092',
+    'topic': 'user_events'
+}
+
+ch_config = {
+    'host': 'localhost',
+    'port': 9000,
+    'user': 'default',
+    'password': '',
+    'database': 'default'
+}
+
+# логирование
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+log = logging.getLogger('pipeline')
+
+def init():
+    """создаем таблицы если их нет"""
+    log.info("инициализация...")
+    
+    # постгрес
+    conn = None
+    try:
+        conn = psycopg2.connect(**pg_config)
+        cur = conn.cursor()
+        
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS user_logins (
+                id SERIAL PRIMARY KEY,
+                user_id INTEGER NOT NULL,
+                event_type VARCHAR(50) NOT NULL,
+                event_time TIMESTAMP NOT NULL DEFAULT NOW(),
+                additional_data JSONB,
+                sent_to_kafka BOOLEAN DEFAULT FALSE,
+                sent_at TIMESTAMP,
+                created_at TIMESTAMP DEFAULT NOW()
+            )
+        """)
+        
+        cur.execute("CREATE INDEX IF NOT EXISTS idx_unsent ON user_logins (sent_to_kafka) WHERE sent_to_kafka = FALSE")
+        cur.execute("CREATE INDEX IF NOT EXISTS idx_event_time ON user_logins (event_time)")
+        
+        cur.execute("SELECT COUNT(*) FROM user_logins")
+        if cur.fetchone()[0] == 0:
+            log.info("добавляем тестовые данные")
+            for i in range(1, 6):
+                cur.execute("""
+                    INSERT INTO user_logins (user_id, event_type, additional_data)
+                    VALUES (%s, %s, %s)
+                """, (i, ['login', 'purchase', 'signup'][i % 3], json.dumps({'num': i})))
+        
+        conn.commit()
+        log.info("постгрес ок")
+        cur.close()
+    except Exception as e:
+        log.error(f"ошибка в постгрес: {e}")
+    finally:
+        if conn:
+            conn.close()
+    
+    # кликхаус
+    try:
+        ch = Client(**ch_config)
+        ch.execute("""
+            CREATE TABLE IF NOT EXISTS user_events (
+                id UInt64,
+                user_id UInt64,
+                event_type String,
+                event_time DateTime,
+                additional_data String,
+                processed_at DateTime DEFAULT now()
+            ) ENGINE = MergeTree()
+            ORDER BY (event_time, user_id)
+        """)
+        log.info("кликхаус ок")
+    except Exception as e:
+        log.error(f"ошибка в кликхаус: {e}")
+
+def producer():
+    """шлем данные в кафку"""
+    log.info("запуск продюсера")
+    
+    try:
+        prod = KafkaProducer(
+            bootstrap_servers=kafka_config['bootstrap_servers'],
+            value_serializer=lambda v: json.dumps(v, default=str).encode('utf-8'),
+            acks='all',
+            retries=3
+        )
+    except NoBrokersAvailable:
+        log.error("кафка не работает")
+        return
+    
+    log.info(f"подключились к кафке, топик {kafka_config['topic']}")
+    
+    while True:
+        conn = None
+        try:
+            conn = psycopg2.connect(**pg_config)
+            conn.autocommit = False
+            
+            cur = conn.cursor()
+            cur.execute("""
+                SELECT id, user_id, event_type, event_time, additional_data
+                FROM user_logins
+                WHERE sent_to_kafka = FALSE
+                ORDER BY event_time
+                LIMIT 100
+                FOR UPDATE SKIP LOCKED
+            """)
+            rows = cur.fetchall()
+            cur.close()
+            
+            if not rows:
+                conn.commit()
+                time.sleep(5)
+                continue
+            
+            log.info(f"нашли {len(rows)} записей")
+            
+            sent = []
+            for r in rows:
+                msg = {
+                    'id': r[0],
+                    'user_id': r[1],
+                    'event_type': r[2],
+                    'event_time': r[3],
+                    'additional_data': r[4]
+                }
+                f = prod.send(kafka_config['topic'], value=msg)
+                f.get(timeout=10)
+                sent.append(r[0])
+            
+            if sent:
+                cur = conn.cursor()
+                cur.execute("""
+                    UPDATE user_logins
+                    SET sent_to_kafka = TRUE, sent_at = %s
+                    WHERE id = ANY(%s)
+                """, (datetime.now(), sent))
+                cur.close()
+                conn.commit()
+                log.info(f"отправили {len(sent)}")
+            
+        except Exception as e:
+            log.error(f"ошибка: {e}")
+            if conn:
+                conn.rollback()
+            time.sleep(5)
+        finally:
+            if conn:
+                conn.close()
+        
+        time.sleep(1)
+
+def consumer():
+    """читаем из кафки и пишем в кликхаус"""
+    log.info("запуск консьюмера")
+    
+    try:
+        ch = Client(**ch_config)
+        ch.execute('SELECT 1')
+    except Exception as e:
+        log.error(f"кликхаус не отвечает: {e}")
+        return
+    
+    try:
+        cons = KafkaConsumer(
+            kafka_config['topic'],
+            bootstrap_servers=kafka_config['bootstrap_servers'],
+            group_id='clickhouse-group',
+            value_deserializer=lambda m: json.loads(m.decode('utf-8')),
+            auto_offset_reset='earliest',
+            enable_auto_commit=False,
+            max_poll_records=100
+        )
+    except NoBrokersAvailable:
+        log.error("кафка не отвечает")
+        return
+    
+    log.info("подключились")
+    
+    batch = []
+    BATCH = 50
+    
+    try:
+        for msg in cons:
+            try:
+                batch.append(msg.value)
+                
+                if len(batch) >= BATCH:
+                    data = []
+                    for e in batch:
+                        data.append((
+                            e['id'],
+                            e['user_id'],
+                            e['event_type'],
+                            e['event_time'],
+                            json.dumps(e.get('additional_data', {}))
+                        ))
+                    
+                    ch.execute(
+                        "INSERT INTO user_events (id, user_id, event_type, event_time, additional_data) VALUES",
+                        data
+                    )
+                    cons.commit()
+                    log.info(f"сохранили {len(batch)}")
+                    batch = []
+                    
+            except Exception as e:
+                log.error(f"ошибка при обработке: {e}")
+                
+    except KeyboardInterrupt:
+        log.info("останавливаемся")
+        if batch:
+            try:
+                data = []
+                for e in batch:
+                    data.append((
+                        e['id'],
+                        e['user_id'],
+                        e['event_type'],
+                        e['event_time'],
+                        json.dumps(e.get('additional_data', {}))
+                    ))
+                ch.execute(
+                    "INSERT INTO user_events (id, user_id, event_type, event_time, additional_data) VALUES",
+                    data
+                )
+                cons.commit()
+                log.info(f"сохранили остаток {len(batch)}")
+            except Exception as e:
+                log.error(f"ошибка при сохранении остатка: {e}")
+    
+    cons.close()
+    log.info("завершили")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('cmd', choices=['init', 'prod', 'cons'])
+    args = parser.parse_args()
+    
+    if args.cmd == 'init':
+        init()
+    elif args.cmd == 'prod':
+        producer()
+    elif args.cmd == 'cons':
+        consumer()
