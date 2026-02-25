@@ -9,7 +9,6 @@ from clickhouse_driver import Client
 from kafka import KafkaProducer, KafkaConsumer
 from kafka.errors import NoBrokersAvailable
 
-# настройки подключения
 pg_config = {
     'host': 'localhost',
     'port': 5432,
@@ -31,7 +30,6 @@ ch_config = {
     'database': 'default'
 }
 
-# логирование
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 log = logging.getLogger('pipeline')
 
