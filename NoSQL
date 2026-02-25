@@ -1,0 +1,90 @@
+import json
+import os
+from datetime import datetime, timedelta
+from pymongo import MongoClient
+
+# Подключаемся к монге
+client = MongoClient("mongodb://localhost:27017/")
+db = client["my_database"]
+events = db["user_events"]
+archive = db["archived_users"]
+
+# получаем сегодняшнюю дату
+now = datetime.now()
+today = datetime(now.year, now.month, now.day)  # обнуляем время
+
+# считаем даты для условий
+month_ago = today - timedelta(days=30)
+two_weeks_ago = today - timedelta(days=14)
+
+print(f"Сегодня: {today}")
+print(f"регистрация должна быть до: {month_ago}")
+print(f"последняя активность до: {two_weeks_ago}")
+
+# находим всех кто зарегистрировался давно
+old_users = []
+all_users = events.distinct("user_id")  # все юзеры кто есть
+
+for uid in all_users:
+    # берем один документ юзера чтобы посмотреть дату реги
+    user_doc = events.find_one({"user_id": uid})
+    if user_doc:
+        reg_date = user_doc["user_info"]["registration_date"]
+        if reg_date <= month_ago:
+            old_users.append(uid)
+
+print(f"нашли старых юзеров: {len(old_users)}")
+
+# теперь среди них ищем кто не активен
+to_archive = []
+
+for uid in old_users:
+    # ищем все события юзера
+    user_events = list(events.find({"user_id": uid}))
+    if user_events:
+        # находим самое позднее событие
+        last_event = max(ue["event_time"] for ue in user_events)
+        if last_event <= two_weeks_ago:
+            to_archive.append(uid)
+
+print(f"из них не активны: {len(to_archive)}")
+
+if not to_archive:
+    print("некого архивировать, выходим")
+    exit()
+
+# архивируем
+archived_count = 0
+for uid in to_archive:
+    # берем последнее событие юзера для архива
+    last = events.find_one({"user_id": uid}, sort=[("event_time", -1)])
+    if last:
+        # добавим дату архивации
+        last["archived_at"] = today
+        archive.insert_one(last)
+        archived_count += 1
+        
+        # удаляем все документы этого юзера
+        events.delete_many({"user_id": uid})
+
+print(f"заархивировано {archived_count} пользователей")
+
+# делаем отчет
+report = {
+    "date": str(today),
+    "archived_count": archived_count,
+    "user_ids": to_archive,
+    "conditions": {
+        "registered_before": str(month_ago),
+        "inactive_since": str(two_weeks_ago)
+    }
+}
+
+# сохраняем в файл
+filename = f"{today}.json"
+filename = filename.replace(" 00:00:00", "")  # костыль чтоб убрать время
+
+with open(filename, "w", encoding="utf-8") as f:
+    json.dump(report, f, indent=4, ensure_ascii=False, default=str)
+
+print(f"отчет сохранен как {filename}")
