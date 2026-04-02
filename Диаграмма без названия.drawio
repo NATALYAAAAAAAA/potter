@@ -382,6 +382,21 @@
         <mxCell id="NK_WmRBboLkITbQYy9nT-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;Базовый справочник Mir-кодов&lt;/div&gt;&lt;div&gt;dim_mir_code&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="190" x="290" y="280" as="geometry" />
         </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По департаменту&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="206" x="294" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По модели&lt;/div&gt;&lt;div&gt;dim_mir_code_model&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="290" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;Фондирование&lt;/div&gt;&lt;div&gt;db_01_account_fondation&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="292" y="554.5" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По счету&lt;/div&gt;&lt;div&gt;dim_mir_code_account&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="294" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По счету&lt;/div&gt;&lt;div&gt;dim_mir_code_account&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="294" y="720" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
