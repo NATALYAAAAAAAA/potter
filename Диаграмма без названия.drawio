@@ -406,6 +406,15 @@
         <mxCell id="NK_WmRBboLkITbQYy9nT-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По клиенту&lt;/div&gt;&lt;div&gt;dim_mir_code_exeption&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="210" x="290" y="970" as="geometry" />
         </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;Ручные правки&lt;/div&gt;&lt;div&gt;patched_acclist&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="290" y="1061" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Добавление суффиксов" vertex="1">
+          <mxGeometry height="60" width="210" x="292" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Финальный Mir-код" vertex="1">
+          <mxGeometry height="60" width="210" x="290" y="1220" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
