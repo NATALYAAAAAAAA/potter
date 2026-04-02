@@ -394,8 +394,14 @@
         <mxCell id="NK_WmRBboLkITbQYy9nT-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По счету&lt;/div&gt;&lt;div&gt;dim_mir_code_account&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="210" x="294" y="640" as="geometry" />
         </mxCell>
-        <mxCell id="NK_WmRBboLkITbQYy9nT-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По счету&lt;/div&gt;&lt;div&gt;dim_mir_code_account&lt;/div&gt;" vertex="1">
+        <mxCell id="NK_WmRBboLkITbQYy9nT-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По договору&lt;/div&gt;&lt;div&gt;dim_mir_code_contract&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="210" x="294" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По ГК&lt;/div&gt;&lt;div&gt;dim_mir_code_exep_gk&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="290" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По ГК&lt;/div&gt;&lt;div&gt;dim_mir_code_exep_gk&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="290" y="890" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
