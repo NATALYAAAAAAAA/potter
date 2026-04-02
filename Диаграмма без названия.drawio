@@ -379,13 +379,13 @@
         <mxCell id="NK_WmRBboLkITbQYy9nT-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем статью BizExCo&lt;div&gt;plan_account&lt;/div&gt;&lt;div&gt;План счетов&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="160" x="290" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="NK_WmRBboLkITbQYy9nT-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;Базовый справочник Mir-кодов&lt;/div&gt;&lt;div&gt;dim_mir_code&lt;/div&gt;" vertex="1">
-          <mxGeometry height="70" width="190" x="290" y="280" as="geometry" />
+        <mxCell id="NK_WmRBboLkITbQYy9nT-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код по статье BizExCo&amp;nbsp;&lt;div&gt;Базовый справочник Mir-кодов&lt;/div&gt;&lt;div&gt;dim_mir_code&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="260" x="290" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="NK_WmRBboLkITbQYy9nT-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По департаменту&lt;/div&gt;" vertex="1">
-          <mxGeometry height="60" width="206" x="294" y="390" as="geometry" />
+        <mxCell id="NK_WmRBboLkITbQYy9nT-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код п&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;о департаменту&lt;/span&gt;&lt;div&gt;&lt;div&gt;Базовый справочник Mir-кодов&lt;/div&gt;&lt;div&gt;dim_mir_code&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="276" x="294" y="390" as="geometry" />
         </mxCell>
-        <mxCell id="NK_WmRBboLkITbQYy9nT-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;По модели&lt;/div&gt;&lt;div&gt;dim_mir_code_model&lt;/div&gt;" vertex="1">
+        <mxCell id="NK_WmRBboLkITbQYy9nT-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код п&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;о модели&lt;/span&gt;&lt;div&gt;dim_mir_code_model&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="210" x="290" y="470" as="geometry" />
         </mxCell>
         <mxCell id="NK_WmRBboLkITbQYy9nT-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;Фондирование&lt;/div&gt;&lt;div&gt;db_01_account_fondation&lt;/div&gt;" vertex="1">
