@@ -421,9 +421,6 @@
         <mxCell id="NK_WmRBboLkITbQYy9nT-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Мир-код&lt;div&gt;исключения для индивидуальных клиентов&lt;/div&gt;&lt;div&gt;&lt;b&gt;Справочник MIR-кодов (исключения)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;dim_mir_code_exeption&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="255" x="240" y="585" as="geometry" />
         </mxCell>
-        <mxCell id="NK_WmRBboLkITbQYy9nT-33" edge="1" parent="1" source="NK_WmRBboLkITbQYy9nT-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NK_WmRBboLkITbQYy9nT-16">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="NK_WmRBboLkITbQYy9nT-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;Ручные правки&lt;/div&gt;&lt;div&gt;&lt;b&gt;patched_acclist&lt;/b&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="255" x="240" y="1000" as="geometry" />
         </mxCell>
@@ -434,7 +431,7 @@
           <mxGeometry height="60" width="255" x="240" y="910" as="geometry" />
         </mxCell>
         <mxCell id="NK_WmRBboLkITbQYy9nT-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Финальный Mir-код&lt;/b&gt;" vertex="1">
-          <mxGeometry height="60" width="255" x="240" y="1090" as="geometry" />
+          <mxGeometry height="60" width="255" x="240" y="1200" as="geometry" />
         </mxCell>
         <mxCell id="NK_WmRBboLkITbQYy9nT-26" edge="1" parent="1" source="NK_WmRBboLkITbQYy9nT-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
           <mxGeometry relative="1" as="geometry">
@@ -443,6 +440,9 @@
         </mxCell>
         <mxCell id="NK_WmRBboLkITbQYy9nT-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Мир-код по списку исключений п&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;о ГК&lt;/span&gt;&lt;div&gt;&lt;b&gt;Справочник MIR-кодов (исключения по ГК)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;dim_mir_code_exep_gk&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="255" x="240" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="NK_WmRBboLkITbQYy9nT-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Проставляем&amp;nbsp;IBS_010 по Ипотечным агентам&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="255" x="240" y="1090" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
