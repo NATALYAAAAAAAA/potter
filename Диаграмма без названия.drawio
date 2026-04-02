@@ -379,7 +379,7 @@
         <mxCell id="NK_WmRBboLkITbQYy9nT-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем статью BizExCo&lt;div&gt;plan_account&lt;/div&gt;&lt;div&gt;План счетов&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="160" x="290" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="NK_WmRBboLkITbQYy9nT-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;Базовый справочник Mir-кодов&amp;nbsp;&lt;/div&gt;" vertex="1">
+        <mxCell id="NK_WmRBboLkITbQYy9nT-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Определяем Мир-код&lt;div&gt;Базовый справочник Mir-кодов&lt;/div&gt;&lt;div&gt;dim_mir_code&lt;/div&gt;" vertex="1">
           <mxGeometry height="70" width="190" x="290" y="280" as="geometry" />
         </mxCell>
       </root>
