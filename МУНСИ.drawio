@@ -4,29 +4,61 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="1i9xGArJ4shb9_ovCN7b-3" edge="1" parent="1" source="zv2XPvhGyotmg7ZA-i97-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="zv2XPvhGyotmg7ZA-i97-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="zv2XPvhGyotmg7ZA-i97-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;div style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: 22px; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;ПОРТАЛ КАЗНАЧЕЙСТВО &lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="530" x="280" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1i9xGArJ4shb9_ovCN7b-17" edge="1" parent="1" source="zv2XPvhGyotmg7ZA-i97-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="545" y="200" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="zv2XPvhGyotmg7ZA-i97-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;МУНСИ (схема&amp;nbsp;&lt;span style=&quot;color: rgb(15, 17, 21); text-align: start; white-space: pre-wrap; background-color: transparent;&quot;&gt;mdm_master)&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="60" width="530" x="280" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="zv2XPvhGyotmg7ZA-i97-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;span style=&quot;color: rgb(15, 17, 21); font-variant-ligatures: no-contextual; text-align: start; white-space: pre-wrap; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;ref_ftppsp&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(15, 17, 21); font-variant-ligatures: no-contextual; text-align: start; white-space: pre-wrap; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Трансфертная ставка и спреды&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(15, 17, 21); font-size: 16px; font-variant-ligatures: no-contextual; text-align: start; white-space: pre-wrap; background-color: rgb(237, 243, 254);&quot;&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="100" width="150" x="30" y="190" as="geometry" />
+        <mxCell id="zv2XPvhGyotmg7ZA-i97-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;labelBackgroundColor=default;" value="&lt;span style=&quot;color: rgb(15, 17, 21); font-variant-ligatures: no-contextual; text-align: start; white-space: pre-wrap;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;ref_ftppsp&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(15, 17, 21); font-variant-ligatures: no-contextual; text-align: start; white-space: pre-wrap;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Трансфертная ставка и спреды&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(15, 17, 21); font-size: 16px; font-variant-ligatures: no-contextual; text-align: start; white-space: pre-wrap;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="150" x="30" y="220" as="geometry" />
         </mxCell>
         <mxCell id="zv2XPvhGyotmg7ZA-i97-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;span style=&quot;color: rgb(15, 17, 21); font-variant-ligatures: no-contextual; text-align: start; white-space: pre-wrap; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;ref_tl&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(15, 17, 21); font-variant-ligatures: no-contextual; text-align: start; white-space: pre-wrap; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Срочность сделки&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="100" width="150" x="200" y="190" as="geometry" />
+          <mxGeometry height="100" width="150" x="200" y="220" as="geometry" />
         </mxCell>
         <mxCell id="zv2XPvhGyotmg7ZA-i97-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;" value="&lt;span style=&quot;color: rgb(15, 17, 21); font-variant-ligatures: no-contextual; white-space: pre-wrap; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;ref_instrum&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#0f1115&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-variant-ligatures: no-contextual; white-space-collapse: preserve; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;Наименование инструментов&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="100" width="150" x="370" y="190" as="geometry" />
+          <mxGeometry height="100" width="150" x="370" y="220" as="geometry" />
         </mxCell>
         <mxCell id="zv2XPvhGyotmg7ZA-i97-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;" value="&lt;div style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: 22px; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;ref_cb_res&lt;/b&gt;&lt;br&gt;Норматив ФОР&lt;/font&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="100" width="150" x="540" y="190" as="geometry" />
+          <mxGeometry height="100" width="150" x="540" y="220" as="geometry" />
         </mxCell>
         <mxCell id="zv2XPvhGyotmg7ZA-i97-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;" value="&lt;div style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: 22px; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;&lt;div style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: 22px; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; margin: 0px !important;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;ref_key_sta&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-variant-ligatures: no-contextual;&quot;&gt;Ключевая ставка ЦБ РФ&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="100" width="150" x="880" y="190" as="geometry" />
+          <mxGeometry height="100" width="150" x="890" y="220" as="geometry" />
         </mxCell>
         <mxCell id="1i9xGArJ4shb9_ovCN7b-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontFamily=Helvetica;" value="&lt;div style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: 22px; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;&lt;div style=&quot;font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; line-height: 22px; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; margin: 0px !important;&quot;&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;ref_sdprub&lt;/b&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px; font-variant-ligatures: no-contextual;&quot;&gt;Надбавка СДП РУБ для ФОР&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="100" width="150" x="710" y="190" as="geometry" />
+          <mxGeometry height="100" width="150" x="710" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="1i9xGArJ4shb9_ovCN7b-12" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="10" y="360" as="sourcePoint" />
+            <mxPoint x="1080" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1i9xGArJ4shb9_ovCN7b-13" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="10" y="360" as="sourcePoint" />
+            <mxPoint x="10" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1i9xGArJ4shb9_ovCN7b-14" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1080" y="200" as="sourcePoint" />
+            <mxPoint x="1080" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1i9xGArJ4shb9_ovCN7b-15" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="10" y="200" as="sourcePoint" />
+            <mxPoint x="1081" y="200" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
